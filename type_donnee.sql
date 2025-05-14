@@ -147,5 +147,22 @@ SELECT
         WHEN code_secteur = '2' THEN 'PRIVE'
         WHEN code_secteur = '9' THEN 'INCONNUE'
         ELSE NULL
-    END AS code_secteur
+    END AS code_secteur,
+    taux_remb,
+    CASE
+        WHEN type_remb = '0'  THEN 'PRESTATION DE REFERENCE'
+        WHEN type_remb = '1'  THEN 'COMPLEMENT D ACTE'
+        WHEN type_remb = '2'  THEN 'TICKET MODERATEUR HORS C2S'
+        WHEN type_remb = '3'  THEN 'SUPPLEMENT HORS ALSACE MOSELLE'
+        WHEN type_remb = '4'  THEN 'SUPPLEMENT ALSACE MOSELLE'
+        WHEN type_remb = '5'  THEN 'TICKET MODERATEUR  C2S'
+        WHEN type_remb = '6'  THEN 'FORFAIT C2S'
+        WHEN type_remb = '7'  THEN 'AME'
+        WHEN type_remb = '10' THEN 'Part oc ACS'
+        WHEN type_remb = '11' THEN 'PART SPECIFIQUE CRPCEN'
+        WHEN type_remb = '12' THEN 'PART SPECIFIQUE CANSSM'
+        WHEN type_remb = '13' THEN 'TICKET MODERATEUR MAYOTTE'
+        WHEN type_remb = '99' THEN 'VALEUR INCONNUE'
+    ELSE NULL
+END AS type_remb
 FROM stg.transactions;
