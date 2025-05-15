@@ -131,5 +131,4 @@ SELECT
         WHEN forfait_journalier = '9' THEN 'VALEUR INCONNUE'
         ELSE NULL
     END AS forfait_journalier
-
 FROM stg.transactions;

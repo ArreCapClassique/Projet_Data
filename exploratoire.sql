@@ -62,24 +62,6 @@ SELECT
 FROM stg.transactions
 UNION ALL
 SELECT
-    'motif_exo' AS column_name,
-    COUNT(*) AS nb_total,
-    COUNT(*) FILTER (WHERE motif_exo = 0 or motif_exo = 99) AS nb_unutilisable,
-    ROUND(
-        CAST(COUNT(*) FILTER (WHERE motif_exo = 0 or motif_exo = 99) AS FLOAT) / COUNT(*), 6
-    ) AS pct_unutilisable
-FROM stg.transactions
-UNION ALL
-SELECT
-    'ticket_mod' AS column_name,
-    COUNT(*) AS nb_total,
-    COUNT(*) FILTER (WHERE ticket_mod = 0 or ticket_mod = 9) AS nb_unutilisable,
-    ROUND(
-        CAST(COUNT(*) FILTER (WHERE ticket_mod = 0 or ticket_mod = 9) AS FLOAT) / COUNT(*), 6
-    ) AS pct_unutilisable
-FROM stg.transactions
-UNION ALL
-SELECT
     'nat_destinataire' AS column_name,
     COUNT(*) AS nb_total,
     COUNT(*) FILTER (WHERE nat_destinataire = 0 or nat_destinataire = 99) AS nb_unutilisable,
@@ -107,18 +89,11 @@ SELECT
 FROM stg.transactions
 UNION ALL
 SELECT
-    'compl_acte' AS column_name,
-    COUNT(*) AS nb_total,
-    COUNT(*) FILTER (WHERE compl_acte = 0 or compl_acte = 9) AS nb_unutilisable,
-    ROUND(
-        CAST(COUNT(*) FILTER (WHERE compl_acte = 0 or compl_acte = 9) AS FLOAT) / COUNT(*), 6
-    ) AS pct_unutilisable
-    UNION ALL
-SELECT
     'forfait_journalier' AS column_name,
     COUNT(*) AS nb_total,
     COUNT(*) FILTER (WHERE forfait_journalier = 8 or forfait_journalier = 9) AS nb_unutilisable,
     ROUND(
         CAST(COUNT(*) FILTER (WHERE forfait_journalier = 8 or forfait_journalier = 9) AS FLOAT) / COUNT(*), 6
     ) AS pct_unutilisable
-FROM stg.transactions;
+FROM stg.transactions
+ORDER BY column_name;
