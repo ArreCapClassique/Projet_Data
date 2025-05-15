@@ -50,6 +50,15 @@ SELECT
     ROUND(
         CAST(COUNT(*) FILTER (WHERE type_remb = 99) AS FLOAT) / COUNT(*), 6
     ) AS pct_unutilisable
+FROM stg.transactions
+UNION ALL
+SELECT
+    'nat_assurance' AS column_name,
+    COUNT(*) AS nb_total,
+    COUNT(*) FILTER (WHERE nat_assurance = 0 or nat_assurance = 99) AS nb_unutilisable,
+    ROUND(
+        CAST(COUNT(*) FILTER (WHERE nat_assurance = 0 or nat_assurance = 99) AS FLOAT) / COUNT(*), 6
+    ) AS pct_unutilisable
 FROM stg.transactions;
 
 
