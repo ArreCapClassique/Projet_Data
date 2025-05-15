@@ -71,49 +71,6 @@ SELECT
         ELSE NULL
     END AS type_envlp,
     CASE
-        WHEN ticket_mod = '0'  THEN 'PRESTATION DE REFERENCE'
-        WHEN ticket_mod = '1'  THEN 'COMPLEMENT D ACTE'
-        WHEN ticket_mod = '2'  THEN 'TICKET MODERATEUR HORS C2S'
-        WHEN ticket_mod = '3'  THEN 'SUPPLEMENT HORS ALSACE MOSELLE'
-        WHEN ticket_mod = '4'  THEN 'SUPPLEMENT ALSACE MOSELLE'
-        WHEN ticket_mod = '5'  THEN 'TICKET MODERATEUR  C2S'
-        WHEN ticket_mod = '6'  THEN 'FORFAIT C2S'
-        WHEN ticket_mod = '7'  THEN 'AME'
-        WHEN ticket_mod = '10' THEN 'Part oc ACS'
-        WHEN ticket_mod = '11' THEN 'PART SPECIFIQUE CRPCEN'
-        WHEN ticket_mod = '12' THEN 'PART SPECIFIQUE CANSSM'
-        WHEN ticket_mod = '13' THEN 'TICKET MODERATEUR MAYOTTE'
-        WHEN ticket_mod = '99' THEN 'VALEUR INCONNUE'
-        ELSE NULL
-    END AS ticket_mod,
-    CASE
-        WHEN motif_exo = '0'   THEN 'SANS OBJET'
-        WHEN motif_exo = '10'  THEN 'ASSURANCE'
-        WHEN motif_exo = '20'  THEN 'REGIMES'
-        WHEN motif_exo = '21'  THEN 'PENSION MILITAIRE D''INVALIDITE (ART. 115)'
-        WHEN motif_exo = '30'  THEN 'NATURE DE PRESTATION'
-        WHEN motif_exo = '41'  THEN 'BENEFICIAIRE ATTEINT D UNE MALADIE LISTE - AFFECTION SANS RAPPORT'
-        WHEN motif_exo = '42'  THEN 'BENEFICIAIRE ATTEINT D UNE MALADIE LISTE - AFFECTION EN  RAPPORT'
-        WHEN motif_exo = '43'  THEN 'PATHOLOGIE HORS LISTE - AFFECTION SANS RAPPORT'
-        WHEN motif_exo = '44'  THEN 'PATHOLOGIE HORS LISTE - AFFECTION EN RAPPORT'
-        WHEN motif_exo = '45'  THEN 'POLYPATHOLOGIE HORS LISTE - AFFECTION SANS RAPPORT'
-        WHEN motif_exo = '46'  THEN 'POLYPATHOLOGIE HORS LISTE - AFFECTION EN RAPPORT'
-        WHEN motif_exo = '47'  THEN 'ARTICLE L324 NON EXONERANT (SAUF TRANSPORTS)'
-        WHEN motif_exo = '51'  THEN 'COEFFICIENT ET ACTE EN RAPPORT'
-        WHEN motif_exo = '52'  THEN 'DIAGNOSTIC ET TRAITEMENT DE LA STERILITE'
-        WHEN motif_exo = '53'  THEN '6EME MOIS DE GROSSESSE'
-        WHEN motif_exo = '54'  THEN 'EDUCATION SPECIALISEE SANS RAPPORT'
-        WHEN motif_exo = '55'  THEN 'EDUCATION SPECIALISEE EN RAPPORT'
-        WHEN motif_exo = '56'  THEN 'AUTRE CAS D EXONERATION'
-        WHEN motif_exo = '62'  THEN 'HOSPIT JOUR/SOS'
-        WHEN motif_exo = '81'  THEN 'PREVENTION'
-        WHEN motif_exo = '82'  THEN 'PREVENTION SOINS DE SUITE BUCCO-DENTAIRE'
-        WHEN motif_exo = '83'  THEN 'ACTES CCAM/NAP EXONERANTS'
-        WHEN motif_exo = '92'  THEN 'SOINS EN RAPPORT AVEC UN ACTE CCAM EXONERANT'
-        WHEN motif_exo = '99'  THEN 'VALEUR INCONNUE'
-        ELSE NULL
-    END AS motif_exo,
-    CASE
         WHEN nat_destinataire = '0'   THEN 'SANS OBJET'
         WHEN nat_destinataire = '11'  THEN 'Assuré'
         WHEN nat_destinataire = '12'  THEN 'Adresse Provisoire'
@@ -166,12 +123,12 @@ SELECT
     ELSE NULL
     END AS type_remb,
     CASE
-        WHEN prs_fjh_typ = '0' THEN 'REGIME'
-        WHEN prs_fjh_typ = '1' THEN 'REGIME LOCAL ALSACE-MOSELLE'
-        WHEN prs_fjh_typ = '2' THEN 'ASSURE'
-        WHEN prs_fjh_typ = '3' THEN 'ORGANISME COMPLEMENTAIRE'
-        WHEN prs_fjh_typ = '8' THEN 'SANS OBJET'
-        WHEN prs_fjh_typ = '9' THEN 'VALEUR INCONNUE'
+        WHEN forfait_journalier = '0' THEN 'REGIME'
+        WHEN forfait_journalier = '1' THEN 'REGIME LOCAL ALSACE-MOSELLE'
+        WHEN forfait_journalier = '2' THEN 'ASSURE'
+        WHEN forfait_journalier = '3' THEN 'ORGANISME COMPLEMENTAIRE'
+        WHEN forfait_journalier = '8' THEN 'SANS OBJET'
+        WHEN forfait_journalier = '9' THEN 'VALEUR INCONNUE'
         ELSE NULL
     END AS forfait_journalier
 
