@@ -12,21 +12,21 @@ FROM (
 
 CREATE OR REPLACE TABLE dwh.dim_beneficiaire AS
 SELECT
-    ROW_NUMBER() OVER (ORDER BY age, region_ben, sexe, ticket_mod) AS id_beneficiaire,
-    MD5(CONCAT(age, region_ben, sexe, ticket_mod)) AS cd_beneficiaire,
-    age, region_ben, sexe, ticket_mod
+    ROW_NUMBER() OVER (ORDER BY age, region_ben, sexe) AS id_beneficiaire,
+    MD5(CONCAT(age, region_ben, sexe)) AS cd_beneficiaire,
+    age, region_ben, sexe
 FROM (
-    SELECT DISTINCT age, region_ben, sexe, ticket_mod
+    SELECT DISTINCT age, region_ben, sexe
     FROM stg.transactions_libelles
 );
 
 CREATE OR REPLACE TABLE dwh.dim_prestation AS
 SELECT
-    ROW_NUMBER() OVER (ORDER BY nat_assurance, type_env, nat_destinataire, motif_exo, nat_prestation, code_secteur, taux_remb, type_remb) AS id_prestation,
-    MD5(CONCAT(nat_assurance, type_env, nat_destinataire, motif_exo, nat_prestation, code_secteur, taux_remb, type_remb)) AS cd_prestation,
-    nat_assurance, type_env, nat_destinataire, motif_exo, nat_prestation, code_secteur, taux_remb, type_remb
+    ROW_NUMBER() OVER (ORDER BY nat_assurance, type_env, nat_destinataire, forfait_journalier, code_secteur, taux_remb, type_remb) AS id_prestation,
+    MD5(CONCAT(nat_assurance, type_env, nat_destinataire, forfait_journalier, code_secteur, taux_remb, type_remb)) AS cd_prestation,
+    nat_assurance, type_env, nat_destinataire, forfait_journalier, code_secteur, taux_remb, type_remb
 FROM (
-    SELECT DISTINCT nat_assurance, type_env, nat_destinataire, motif_exo, nat_prestation, code_secteur, taux_remb, type_remb
+    SELECT DISTINCT nat_assurance, type_env, nat_destinataire, forfait_journalier, code_secteur, taux_remb, type_remb
     FROM stg.transactions_libelles
 );
 
@@ -42,11 +42,11 @@ FROM stg.transactions_libelles tl
 JOIN dwh.dim_periode dp
   ON dp.cd_periode = MD5(CONCAT(tl.ann_soin, tl.mois_soin))
 JOIN dwh.dim_beneficiaire db
-  ON db.cd_beneficiaire = MD5(CONCAT(tl.age, tl.region_ben, tl.sexe, tl.ticket_mod))
+  ON db.cd_beneficiaire = MD5(CONCAT(tl.age, tl.region_ben, tl.sexe))
 JOIN dwh.dim_prestation dpr
   ON dpr.cd_prestation = MD5(CONCAT(
       tl.nat_assurance, tl.type_env,
-      tl.nat_destinataire, tl.motif_exo, tl.nat_prestation,
+      tl.nat_destinataire, tl.forfait_journalier,
       tl.code_secteur, tl.taux_remb, tl.type_remb
   ));
 
