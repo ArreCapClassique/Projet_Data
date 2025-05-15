@@ -164,15 +164,7 @@ SELECT
         WHEN type_remb = '13' THEN 'TICKET MODERATEUR MAYOTTE'
         WHEN type_remb = '99' THEN 'VALEUR INCONNUE'
     ELSE NULL
-END AS type_remb
-    CASE
-        WHEN cpl_cod = '0' THEN 'SANS MAJORATION'
-        WHEN cpl_cod = '1' THEN 'MAJORATION DE NUIT'
-        WHEN cpl_cod = '2' THEN 'MAJORATION DE DIMANCHE ET JOUR FERIE'
-        WHEN cpl_cod = '3' THEN 'MAJORATION D URGENCE'
-        WHEN cpl_cod = '9' THEN 'VALEUR INCONNUE'
-        ELSE NULL
-    END AS compl_acte,
+    END AS type_remb,
     CASE
         WHEN prs_fjh_typ = '0' THEN 'REGIME'
         WHEN prs_fjh_typ = '1' THEN 'REGIME LOCAL ALSACE-MOSELLE'
