@@ -14,7 +14,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202401
 GROUP BY ALL
@@ -33,7 +32,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202402
 GROUP BY ALL
@@ -52,7 +50,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202403
 GROUP BY ALL
@@ -71,7 +68,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202404
 GROUP BY ALL
@@ -90,7 +86,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202405
 GROUP BY ALL
@@ -109,7 +104,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202406
 GROUP BY ALL
@@ -128,7 +122,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202407
 GROUP BY ALL
@@ -147,7 +140,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202408
 GROUP BY ALL
@@ -166,7 +158,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202409
 GROUP BY ALL
@@ -185,7 +176,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202410
 GROUP BY ALL
@@ -204,7 +194,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202411
 GROUP BY ALL
@@ -223,7 +212,6 @@ SELECT
     DRG_AFF_NAT AS nat_destinataire,
     PRS_FJH_TYP AS forfait_journalier,
     PRS_PPU_SEC AS code_secteur,
-    PRS_REM_TAU AS taux_remb,
     PRS_REM_TYP AS type_remb
 FROM raw.A202412
 GROUP BY ALL;
