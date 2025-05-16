@@ -1,0 +1,15 @@
+Quels sont les principaux facteurs (démographiques, géographiques, administratifs et médicaux) 
+qui influencent le montant des soins payés, remboursés et les dépassements d’honoraires, et comment
+ces facteurs interagissent-ils entre eux sur l’ensemble du territoire et au fil du temps ?
+
+Pour ce faire:
+- Les montants financiers (mnt_depassement, mnt_pay, mnt_rem)
+- Les dimensions temporelles (ann_soin, mois_soin)
+- Les caractéristiques démographiques (age, sexe)
+- Les caractéristiques géographiques (region_ben)
+- Les aspects administratifs (nat_assurance, type_envlp, nat_destinataire, code_secteur, forfait_journalier)
+- Les modalités de remboursement (taux_remb, type_remb)
+
+Nous avons decidé de garder type_envlp, type_remb et nat_destinataire même s'ils ont une large pourcentage de 
+données unitilisables car elles seront pour la majorité utilisables.
+
