@@ -1,0 +1,316 @@
+{
+    "FLT_DEP_MNT > 0": {
+        "alias": "dep_honoraire",
+        "category": "CIBLE",
+        "type": "DOUBLE"
+    },
+    "AGE_BEN_SNDS": {
+        "alias": "tranche_age_bénéficiaire",
+        "category": "BENEFICIAIRE",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "ASU_NAT": {
+        "alias": "nature_assurance",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            99
+        ]
+    },
+    "ATT_NAT": {
+        "alias": "nature_accident_travail",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            9
+        ]
+    },
+    "BEN_CMU_TOP": {
+        "alias": "top_bénéficiaire",
+        "category": "BENEFICIAIRE",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            9
+        ]
+    },
+    "BEN_QLT_COD": {
+        "alias": "qualité_du_bénéficiaire",
+        "category": "BENEFICIAIRE",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            9
+        ]
+    },
+    "BEN_RES_REG": {
+        "alias": "région_résidence_bénéficiaire",
+        "category": "BENEFICIAIRE",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "BEN_SEX_COD": {
+        "alias": "sexe_du_bénéficiaire",
+        "category": "BENEFICIAIRE",
+        "type": "UTINYINT",
+        "invalid": [
+            9
+        ]
+    },
+    "CPL_COD": {
+        "alias": "complément_acte",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": 9
+    },
+    "CPT_ENV_TYP": {
+        "alias": "type_enveloppe",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            9,
+            98
+        ]
+    },
+    "DDP_SPE_COD": {
+        "alias": "discipline_prestation_etb",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            121
+        ]
+    },
+    "DRG_AFF_NAT": {
+        "alias": "nature_destinataire_règlement",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            99
+        ]
+    },
+    "ETE_CAT_SNDS": {
+        "alias": "catégorie_etb_exécutant",
+        "category": "EXECUTANT",
+        "type": "USMALLINT",
+        "invalid": [
+            9999
+        ]
+    },
+    "ETE_IND_TAA": {
+        "alias": "indicateur_taa",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            9
+        ]
+    },
+    "ETE_REG_COD": {
+        "alias": "région_implantation_etb",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "ETE_TYP_SNDS": {
+        "alias": "type_etb_exécutant",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "ETP_CAT_SNDS": {
+        "alias": "catégorie_etb_prescripteur",
+        "category": "PRESCRIPTEUR",
+        "type": "USMALLINT",
+        "invalid": [
+            9999
+        ]
+    },
+    "ETP_REG_COD": {
+        "alias": "région_implantation_etb",
+        "category": "PRESCRIPTEUR",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "EXE_INS_REG": {
+        "alias": "région_ps_exécutant",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "EXO_MTF": {
+        "alias": "motif_exonération_ticket",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            99
+        ]
+    },
+    "MDT_TYP_COD": {
+        "alias": "mode_traitement_etb",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            9
+        ]
+    },
+    "MFT_COD": {
+        "alias": "mode_fixation_tarifs",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "MTM_NAT": {
+        "alias": "modulation_ticket_modérateur",
+        "category": "BENEFICIAIRE",
+        "type": "UTINYINT",
+        "invalid": [
+            9
+        ]
+    },
+    "ORG_CLE_REG": {
+        "alias": "région_organisme_liquidation",
+        "category": "ORGANISME",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "PRE_INS_REG": {
+        "alias": "région_ps_prescripteur",
+        "category": "PRESCRIPTEUR",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "PRS_FJH_TYP": {
+        "alias": "type_prise_en",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            8,
+            9
+        ]
+    },
+    "PRS_PDS_QCP": {
+        "alias": "code_qualificatif_parcours",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            99
+        ]
+    },
+    "PRS_PPU_SEC": {
+        "alias": "code_secteur",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            9
+        ]
+    },
+    "PRS_REM_TYP": {
+        "alias": "type_de_remboursement",
+        "category": "PRESTATION",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "PSE_ACT_CAT": {
+        "alias": "catégorie_exécutant",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "PSE_ACT_SNDS": {
+        "alias": "nature_activité_ps",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            99
+        ]
+    },
+    "PSE_SPE_SNDS": {
+        "alias": "spécialité_médicale_ps",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            99
+        ]
+    },
+    "PSE_STJ_SNDS": {
+        "alias": "statut_juridique_ps",
+        "category": "EXECUTANT",
+        "type": "UTINYINT",
+        "invalid": [
+            9
+        ]
+    },
+    "PSP_ACT_CAT": {
+        "alias": "catégorie_du_prescripteur",
+        "category": "PRESCRIPTEUR",
+        "type": "UTINYINT",
+        "invalid": [
+            99
+        ]
+    },
+    "PSP_ACT_SNDS": {
+        "alias": "nature_activité_ps",
+        "category": "PRESCRIPTEUR",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            99
+        ]
+    },
+    "PSP_SPE_SNDS": {
+        "alias": "spécialité_médicale_ps",
+        "category": "PRESCRIPTEUR",
+        "type": "UTINYINT",
+        "invalid": [
+            0,
+            99
+        ]
+    },
+    "SOI_ANN": {
+        "alias": "année_de_soins",
+        "category": "PERIODE",
+        "type": "USMALLINT",
+        "invalid": [
+            "0000",
+            "0001"
+        ]
+    },
+    "SOI_MOI": {
+        "alias": "mois_de_soins",
+        "category": "PERIODE",
+        "type": "UTINYINT",
+        "invalid": [
+            "00"
+        ]
+    }
+}
